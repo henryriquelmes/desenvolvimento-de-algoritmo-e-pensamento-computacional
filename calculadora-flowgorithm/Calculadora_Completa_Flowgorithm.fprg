@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Calculadora Completa"/>
+        <attribute name="authors" value="GUTH"/>
+        <attribute name="about" value="Calculadora com 20 operacoes - projeto de iniciacao"/>
+        <attribute name="saved" value="2026-08-31 10:02:17 "/>
+        <attribute name="created" value="R1VUSEhFTlJZUklRVUVMTUVTU087REYwMS1MQUIwNS0yMTsyMDI2LTA4LTMxOyIwODo1NzozMyAiOzM0OTQ="/>
+        <attribute name="edited" value="R1VUSEhFTlJZUklRVUVMTUVTU087REYwMS1MQUIwNS0yMTsyMDI2LTA4LTMxOyIxMDowMjoxNyAiOzE7MzU4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <declare name="numero1, numero2" type="Real" array="False" size=""/>
+            <declare name="resultado, valor, porcentagem" type="Real" array="False" size=""/>
+            <declare name="temperatura, perimetro, area, base, altura, raio, lado" type="Real" array="False" size=""/>
+            <declare name="volume, juros, desconto, distancia, tempo, velocidade" type="Real" array="False" size=""/>
+            <declare name="peso, imc" type="Real" array="False" size=""/>
+            <assign variable="opcao" expression="-1"/>
+            <while expression="opcao != 0">
+                <output expression="&quot;CALCULADORA&quot;" newline="True"/>
+                <output expression="&quot;1 - Soma&quot;" newline="True"/>
+                <output expression="&quot;2 - Subtracao&quot;" newline="True"/>
+                <output expression="&quot;3 - Multiplicacao&quot;" newline="True"/>
+                <output expression="&quot;4 - Divisao&quot;" newline="True"/>
+                <output expression="&quot;5 - Media aritmetica&quot;" newline="True"/>
+                <output expression="&quot;6 - Porcentagem&quot;" newline="True"/>
+                <output expression="&quot;7 - Regra de tres&quot;" newline="True"/>
+                <output expression="&quot;8 - Celsius para Fahrenheit&quot;" newline="True"/>
+                <output expression="&quot;9 - Fahrenheit para Celsius&quot;" newline="True"/>
+                <output expression="&quot;10 - Perimetro do quadrado&quot;" newline="True"/>
+                <output expression="&quot;11 - Area do quadrado&quot;" newline="True"/>
+                <output expression="&quot;12 - Area do retangulo&quot;" newline="True"/>
+                <output expression="&quot;13 - Area do circulo&quot;" newline="True"/>
+                <output expression="&quot;14 - Volume do cubo&quot;" newline="True"/>
+                <output expression="&quot;15 - Juros simples&quot;" newline="True"/>
+                <output expression="&quot;16 - Desconto&quot;" newline="True"/>
+                <output expression="&quot;17 - Velocidade media&quot;" newline="True"/>
+                <output expression="&quot;18 - Par ou impar&quot;" newline="True"/>
+                <output expression="&quot;19 - Comparacao entre dois numeros&quot;" newline="True"/>
+                <output expression="&quot;20 - IMC&quot;" newline="True"/>
+                <output expression="&quot;0 - Sair&quot;" newline="True"/>
+                <output expression="&quot;Digite a opcao desejada:&quot;" newline="True"/>
+                <input variable="opcao"/>
+                <if expression="opcao == 1">
+                    <then>
+                        <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                        <input variable="numero1"/>
+                        <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                        <input variable="numero2"/>
+                        <assign variable="resultado" expression="numero1 + numero2"/>
+                        <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="opcao == 2">
+                            <then>
+                                <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                                <input variable="numero1"/>
+                                <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                                <input variable="numero2"/>
+                                <assign variable="resultado" expression="numero1 - numero2"/>
+                                <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="opcao == 3">
+                                    <then>
+                                        <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                                        <input variable="numero1"/>
+                                        <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                                        <input variable="numero2"/>
+                                        <assign variable="resultado" expression="numero1 * numero2"/>
+                                        <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="opcao == 4">
+                                            <then>
+                                                <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                                                <input variable="numero1"/>
+                                                <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                                                <input variable="numero2"/>
+                                                <if expression="numero2 == 0">
+                                                    <then>
+                                                        <output expression="&quot;Nao e possivel dividir por zero.&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <assign variable="resultado" expression="numero1 / numero2"/>
+                                                        <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="opcao == 5">
+                                                    <then>
+                                                        <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                                                        <input variable="numero1"/>
+                                                        <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                                                        <input variable="numero2"/>
+                                                        <assign variable="resultado" expression="(numero1 + numero2) / 2"/>
+                                                        <output expression="&quot;Media: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="opcao == 6">
+                                                            <then>
+                                                                <output expression="&quot;Digite o valor:&quot;" newline="True"/>
+                                                                <input variable="valor"/>
+                                                                <output expression="&quot;Digite a porcentagem:&quot;" newline="True"/>
+                                                                <input variable="porcentagem"/>
+                                                                <assign variable="resultado" expression="valor * porcentagem / 100"/>
+                                                                <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="opcao == 7">
+                                                                    <then>
+                                                                        <output expression="&quot;Digite o primeiro valor (A):&quot;" newline="True"/>
+                                                                        <input variable="numero1"/>
+                                                                        <output expression="&quot;Digite o segundo valor (B):&quot;" newline="True"/>
+                                                                        <input variable="numero2"/>
+                                                                        <output expression="&quot;Digite o terceiro valor (C):&quot;" newline="True"/>
+                                                                        <input variable="valor"/>
+                                                                        <if expression="numero1 == 0">
+                                                                            <then>
+                                                                                <output expression="&quot;Nao e possivel usar zero como primeiro valor.&quot;" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <assign variable="resultado" expression="numero2 * valor / numero1"/>
+                                                                                <output expression="&quot;Resultado: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="opcao == 8">
+                                                                            <then>
+                                                                                <output expression="&quot;Digite a temperatura em Celsius:&quot;" newline="True"/>
+                                                                                <input variable="temperatura"/>
+                                                                                <assign variable="resultado" expression="temperatura * 9 / 5 + 32"/>
+                                                                                <output expression="&quot;Fahrenheit: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="opcao == 9">
+                                                                                    <then>
+                                                                                        <output expression="&quot;Digite a temperatura em Fahrenheit:&quot;" newline="True"/>
+                                                                                        <input variable="temperatura"/>
+                                                                                        <assign variable="resultado" expression="(temperatura - 32) * 5 / 9"/>
+                                                                                        <output expression="&quot;Celsius: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <if expression="opcao == 10">
+                                                                                            <then>
+                                                                                                <output expression="&quot;Digite o lado do quadrado:&quot;" newline="True"/>
+                                                                                                <input variable="lado"/>
+                                                                                                <assign variable="perimetro" expression="lado * 4"/>
+                                                                                                <output expression="&quot;Perimetro: &quot; &amp; ToFixed(perimetro, 2)" newline="True"/>
+                                                                                            </then>
+                                                                                            <else>
+                                                                                                <if expression="opcao == 11">
+                                                                                                    <then>
+                                                                                                        <output expression="&quot;Digite o lado do quadrado:&quot;" newline="True"/>
+                                                                                                        <input variable="lado"/>
+                                                                                                        <assign variable="area" expression="lado * lado"/>
+                                                                                                        <output expression="&quot;Area: &quot; &amp; ToFixed(area, 2)" newline="True"/>
+                                                                                                    </then>
+                                                                                                    <else>
+                                                                                                        <if expression="opcao == 12">
+                                                                                                            <then>
+                                                                                                                <output expression="&quot;Digite a base do retangulo:&quot;" newline="True"/>
+                                                                                                                <input variable="base"/>
+                                                                                                                <output expression="&quot;Digite a altura do retangulo:&quot;" newline="True"/>
+                                                                                                                <input variable="altura"/>
+                                                                                                                <assign variable="area" expression="base * altura"/>
+                                                                                                                <output expression="&quot;Area: &quot; &amp; ToFixed(area, 2)" newline="True"/>
+                                                                                                            </then>
+                                                                                                            <else>
+                                                                                                                <if expression="opcao == 13">
+                                                                                                                    <then>
+                                                                                                                        <output expression="&quot;Digite o raio do circulo:&quot;" newline="True"/>
+                                                                                                                        <input variable="raio"/>
+                                                                                                                        <assign variable="area" expression="3.14 * raio * raio"/>
+                                                                                                                        <output expression="&quot;Area: &quot; &amp; ToFixed(area, 2)" newline="True"/>
+                                                                                                                    </then>
+                                                                                                                    <else>
+                                                                                                                        <if expression="opcao == 14">
+                                                                                                                            <then>
+                                                                                                                                <output expression="&quot;Digite o lado do cubo:&quot;" newline="True"/>
+                                                                                                                                <input variable="lado"/>
+                                                                                                                                <assign variable="volume" expression="lado * lado * lado"/>
+                                                                                                                                <output expression="&quot;Volume: &quot; &amp; ToFixed(volume, 2)" newline="True"/>
+                                                                                                                            </then>
+                                                                                                                            <else>
+                                                                                                                                <if expression="opcao == 15">
+                                                                                                                                    <then>
+                                                                                                                                        <output expression="&quot;Digite o capital:&quot;" newline="True"/>
+                                                                                                                                        <input variable="numero1"/>
+                                                                                                                                        <output expression="&quot;Digite a taxa de juros (%):&quot;" newline="True"/>
+                                                                                                                                        <input variable="numero2"/>
+                                                                                                                                        <output expression="&quot;Digite o tempo:&quot;" newline="True"/>
+                                                                                                                                        <input variable="valor"/>
+                                                                                                                                        <assign variable="juros" expression="numero1 * numero2 * valor / 100"/>
+                                                                                                                                        <output expression="&quot;Juros: &quot; &amp; ToFixed(juros, 2)" newline="True"/>
+                                                                                                                                    </then>
+                                                                                                                                    <else>
+                                                                                                                                        <if expression="opcao == 16">
+                                                                                                                                            <then>
+                                                                                                                                                <output expression="&quot;Digite o valor da compra:&quot;" newline="True"/>
+                                                                                                                                                <input variable="valor"/>
+                                                                                                                                                <output expression="&quot;Digite o desconto (%):&quot;" newline="True"/>
+                                                                                                                                                <input variable="desconto"/>
+                                                                                                                                                <assign variable="resultado" expression="valor * desconto / 100"/>
+                                                                                                                                                <output expression="&quot;Valor do desconto: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                                                                                                                <assign variable="resultado" expression="valor - resultado"/>
+                                                                                                                                                <output expression="&quot;Valor final: &quot; &amp; ToFixed(resultado, 2)" newline="True"/>
+                                                                                                                                            </then>
+                                                                                                                                            <else>
+                                                                                                                                                <if expression="opcao == 17">
+                                                                                                                                                    <then>
+                                                                                                                                                        <output expression="&quot;Digite a distancia:&quot;" newline="True"/>
+                                                                                                                                                        <input variable="distancia"/>
+                                                                                                                                                        <output expression="&quot;Digite o tempo:&quot;" newline="True"/>
+                                                                                                                                                        <input variable="tempo"/>
+                                                                                                                                                        <if expression="tempo == 0">
+                                                                                                                                                            <then>
+                                                                                                                                                                <output expression="&quot;Nao e possivel dividir por zero.&quot;" newline="True"/>
+                                                                                                                                                            </then>
+                                                                                                                                                            <else>
+                                                                                                                                                                <assign variable="velocidade" expression="distancia / tempo"/>
+                                                                                                                                                                <output expression="&quot;Velocidade media: &quot; &amp; ToFixed(velocidade, 2)" newline="True"/>
+                                                                                                                                                            </else>
+                                                                                                                                                        </if>
+                                                                                                                                                    </then>
+                                                                                                                                                    <else>
+                                                                                                                                                        <if expression="opcao == 18">
+                                                                                                                                                            <then>
+                                                                                                                                                                <output expression="&quot;Digite um numero inteiro:&quot;" newline="True"/>
+                                                                                                                                                                <input variable="numero1"/>
+                                                                                                                                                                <if expression="numero1 % 2 == 0">
+                                                                                                                                                                    <then>
+                                                                                                                                                                        <output expression="&quot;O numero e par.&quot;" newline="True"/>
+                                                                                                                                                                    </then>
+                                                                                                                                                                    <else>
+                                                                                                                                                                        <output expression="&quot;O numero e impar.&quot;" newline="True"/>
+                                                                                                                                                                    </else>
+                                                                                                                                                                </if>
+                                                                                                                                                            </then>
+                                                                                                                                                            <else>
+                                                                                                                                                                <if expression="opcao == 19">
+                                                                                                                                                                    <then>
+                                                                                                                                                                        <output expression="&quot;Digite o primeiro numero:&quot;" newline="True"/>
+                                                                                                                                                                        <input variable="numero1"/>
+                                                                                                                                                                        <output expression="&quot;Digite o segundo numero:&quot;" newline="True"/>
+                                                                                                                                                                        <input variable="numero2"/>
+                                                                                                                                                                        <if expression="numero1 &gt; numero2">
+                                                                                                                                                                            <then>
+                                                                                                                                                                                <output expression="&quot;O primeiro numero e maior.&quot;" newline="True"/>
+                                                                                                                                                                            </then>
+                                                                                                                                                                            <else>
+                                                                                                                                                                                <if expression="numero1 &lt; numero2">
+                                                                                                                                                                                    <then>
+                                                                                                                                                                                        <output expression="&quot;O segundo numero e maior.&quot;" newline="True"/>
+                                                                                                                                                                                    </then>
+                                                                                                                                                                                    <else>
+                                                                                                                                                                                        <output expression="&quot;Os numeros sao iguais.&quot;" newline="True"/>
+                                                                                                                                                                                    </else>
+                                                                                                                                                                                </if>
+                                                                                                                                                                            </else>
+                                                                                                                                                                        </if>
+                                                                                                                                                                    </then>
+                                                                                                                                                                    <else>
+                                                                                                                                                                        <if expression="opcao == 20">
+                                                                                                                                                                            <then>
+                                                                                                                                                                                <output expression="&quot;Digite seu peso (kg):&quot;" newline="True"/>
+                                                                                                                                                                                <input variable="peso"/>
+                                                                                                                                                                                <output expression="&quot;Digite sua altura (m):&quot;" newline="True"/>
+                                                                                                                                                                                <input variable="altura"/>
+                                                                                                                                                                                <if expression="altura == 0">
+                                                                                                                                                                                    <then>
+                                                                                                                                                                                        <output expression="&quot;A altura nao pode ser zero.&quot;" newline="True"/>
+                                                                                                                                                                                    </then>
+                                                                                                                                                                                    <else>
+                                                                                                                                                                                        <assign variable="imc" expression="peso / (altura * altura)"/>
+                                                                                                                                                                                        <output expression="&quot;IMC: &quot; &amp; ToFixed(imc, 2)" newline="True"/>
+                                                                                                                                                                                        <if expression="imc &lt; 18.5">
+                                                                                                                                                                                            <then>
+                                                                                                                                                                                                <output expression="&quot;Classificacao: Abaixo do peso&quot;" newline="True"/>
+                                                                                                                                                                                            </then>
+                                                                                                                                                                                            <else>
+                                                                                                                                                                                                <if expression="imc &lt;= 24.9">
+                                                                                                                                                                                                    <then>
+                                                                                                                                                                                                        <output expression="&quot;Classificacao: Peso normal&quot;" newline="True"/>
+                                                                                                                                                                                                    </then>
+                                                                                                                                                                                                    <else>
+                                                                                                                                                                                                        <if expression="imc &lt;= 29.9">
+                                                                                                                                                                                                            <then>
+                                                                                                                                                                                                                <output expression="&quot;Classificacao: Sobrepeso&quot;" newline="True"/>
+                                                                                                                                                                                                            </then>
+                                                                                                                                                                                                            <else>
+                                                                                                                                                                                                                <output expression="&quot;Classificacao: Obesidade&quot;" newline="True"/>
+                                                                                                                                                                                                            </else>
+                                                                                                                                                                                                        </if>
+                                                                                                                                                                                                    </else>
+                                                                                                                                                                                                </if>
+                                                                                                                                                                                            </else>
+                                                                                                                                                                                        </if>
+                                                                                                                                                                                    </else>
+                                                                                                                                                                                </if>
+                                                                                                                                                                            </then>
+                                                                                                                                                                            <else>
+                                                                                                                                                                                <output expression="&quot;Opcao invalida.&quot;" newline="True"/>
+                                                                                                                                                                            </else>
+                                                                                                                                                                        </if>
+                                                                                                                                                                    </else>
+                                                                                                                                                                </if>
+                                                                                                                                                            </else>
+                                                                                                                                                        </if>
+                                                                                                                                                    </else>
+                                                                                                                                                </if>
+                                                                                                                                            </else>
+                                                                                                                                        </if>
+                                                                                                                                    </else>
+                                                                                                                                </if>
+                                                                                                                            </else>
+                                                                                                                        </if>
+                                                                                                                    </else>
+                                                                                                                </if>
+                                                                                                            </else>
+                                                                                                        </if>
+                                                                                                    </else>
+                                                                                                </if>
+                                                                                            </else>
+                                                                                        </if>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Programa encerrado.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
