@@ -4,7 +4,7 @@
 Projeto de iniciação em lógica de programação: desenvolvimento de uma calculadora com múltiplas operações matemáticas, geométricas e financeiras, implementada em **Flowgorithm**.
 
 ## Aluno
-Guth Henry Riquelmes — Análise e Desenvolvimento de Sistemas (ADS)
+Guth Henry Riquelmes Sousa Fonteles — Análise e Desenvolvimento de Sistemas (ADS)
 
 ## Objetivo
 Implementar, em um único fluxograma, um programa de menu interativo que ofereça 20 funções de cálculo distintas, exercitando estruturas de decisão (`if/else`), repetição (`while`), entrada/saída de dados e operadores matemáticos.
@@ -35,11 +35,6 @@ O programa exibe um menu numerado de 0 a 20 e aguarda a digitação da opção d
 | 18 | Par ou ímpar |
 | 19 | Comparação entre dois números |
 | 20 | **Cálculo do IMC** (com classificação: abaixo do peso, peso normal, sobrepeso ou obesidade) |
-
-## Funções obrigatórias
-Este projeto atende às exigências de conter, entre as 20 funções:
-- **Cálculo do IMC** — opção 20, incluindo classificação do resultado.
-- **Cálculo de área** — opções 11 (quadrado), 12 (retângulo) e 13 (círculo).
 
 ## Como executar
 1. Instale o [Flowgorithm](http://www.flowgorithm.org/download/) (gratuito).
