@@ -1,4 +1,4 @@
-# Calculadora Completa em C
+# Calculadora Completa em C 🧮
 
 ## 1. Descrição do Projeto
 
