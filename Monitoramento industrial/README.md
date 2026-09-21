@@ -68,8 +68,6 @@ Em todos os três cenários, o relatório final foi exibido corretamente ao tér
 
 ## 7. Questão final de reflexão
 
-**Por que você escolheu while, do...while ou uma combinação das duas estruturas? Em qual parte do algoritmo a diferença entre testar a condição antes ou depois da execução foi importante para sua solução?**
-
 Usei uma combinação das duas estruturas. O `do...while` foi usado nas validações de entrada (limite, temperatura e opção de continuar), porque nesses casos é preciso primeiro pedir o valor ao usuário para só depois verificar se ele é válido.
 
 Já o `while` foi usado no laço principal do monitoramento, porque ali a condição precisa ser verificada antes de começar uma nova leitura. Isso é importante quando o limite de três temperaturas consecutivas é atingido: o programa precisa parar imediatamente, sem fazer mais nenhuma leitura, o que só é possível testando a condição antes de executar o bloco.
