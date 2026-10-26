@@ -44,7 +44,7 @@ Programa em linguagem C para cadastrar e consultar os equipamentos de um laborat
 
 1. Acesse [onlinegdb.com/online_c_compiler](https://www.onlinegdb.com/online_c_compiler).
 2. Selecione a linguagem **C** (não C++).
-3. Apague o código de exemplo e cole o conteúdo do `main.c`.
+3. Apague o código de exemplo e cole o conteúdo do `cadastro.c`.
 4. Clique em **Run**.
 5. Use o menu no terminal que aparece na parte de baixo da tela.
 
